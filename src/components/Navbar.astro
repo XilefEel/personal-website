@@ -1,0 +1,28 @@
+---
+const links = [
+  { name: "About", href: "#about" },
+  { name: "Skills", href: "#skills" },
+  { name: "Education", href: "#education" },
+  { name: "Projects", href: "#projects" },
+];
+---
+
+<nav class="bg-white shadow-sm fixed w-full top-0 z-50">
+  <div class="max-w-6xl mx-auto px-4 py-4">
+    <div class="flex justify-between items-center">
+      <div></div>
+      <div class="space-x-6">
+        {
+          links.map((link) => (
+            <a
+              href={link.href}
+              class="text-gray-700 hover:text-purple-500 font-medium transition"
+            >
+              {link.name}
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</nav>

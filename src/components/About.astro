@@ -1,0 +1,75 @@
+---
+import { Github, Instagram, Linkedin } from "@lucide/astro";
+---
+
+<section id="about" class="bg-white py-24 px-8">
+  <div class="max-w-5xl mx-auto">
+    <h2 class="text-4xl flex justify-center text-purple-500 font-bold mb-6">
+      About Me
+    </h2>
+
+    <div class="grid md:grid-cols-5 gap-12 items-start">
+      <div class="md:col-span-2">
+        <img
+          src="/about_image.jpg"
+          alt="Felix Lee"
+          class="w-full rounded-lg mb-6"
+        />
+      </div>
+
+      <div class="md:col-span-3 space-y-6">
+        <div>
+          <h3 class="text-2xl font-semibold mb-4">Hi, I'm Felix 👋</h3>
+          <p class="text-gray-700 leading-relaxed">
+            I'm an undergraduate at BINUS University with a passion for crafting
+            clean, minimal, and creative software. I believe great software
+            isn't just about functionality, it's about creating intuitive
+            experiences that feel natural and effortless to use.
+          </p>
+        </div>
+
+        <div class="bg-purple-50 border-l-4 border-purple-600 p-5 rounded-lg">
+          <p class="text-gray-700 leading-relaxed">
+            <span class="font-semibold">Currently building</span>
+            <span class="font-semibold text-purple-600"> MindNest</span>, an all
+            in one full-stack productivity tool designed to help people organize
+            their thoughts and tasks seamlessly. Built with Rust and Tauri for a
+            lightweight desktop experience and React for a dynamic and beautiful
+            UI.
+          </p>
+        </div>
+        <div class="bg-linear-to-r from-purple-100 to-pink-100 p-5 rounded-xl">
+          <h4 class="text-xl font-semibold mb-2">Fun Facts</h4>
+          <ul class="space-y-2">
+            <li>✨ I can solve a Rubik's cube in under 30 seconds</li>
+            <li>✨ I'm learning Chinese in my free time</li>
+            <li>✨ I love exploring new technologies and frameworks</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="flex flex-row justify-center space-x-6 mt-3">
+      <a
+        href="https://github.com/XilefEel"
+        target="_blank"
+        class="text-purple-600 hover:text-purple-800 transition-all duration-200"
+      >
+        <Github size={30} />
+      </a>
+      <a
+        href="https://www.instagram.com/felixlee274/"
+        target="_blank"
+        class="text-purple-600 hover:text-pink-500 transition-all duration-200"
+      >
+        <Instagram size={30} />
+      </a>
+      <a
+        href="https://www.linkedin.com/in/felix-lee-115515277/"
+        target="_blank"
+        class="text-purple-600 hover:text-blue-600 transition-all duration-200"
+      >
+        <Linkedin size={30} />
+      </a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,38 @@
+---
+const skills = [
+  { name: "Python", level: 85 },
+  { name: "TypeScript", level: 80 },
+  { name: "HTML", level: 90 },
+  { name: "CSS", level: 80 },
+  { name: "React", level: 85 },
+  { name: "Vue.js", level: 65 },
+  { name: "Astro", level: 70 },
+  { name: "Rust", level: 50 },
+  { name: "SQLite", level: 75 },
+];
+---
+
+<section id="skills" class="bg-purple-100 py-24 px-8">
+  <div class="max-w-5xl mx-auto text-center">
+    <h2 class="text-4xl font-bold mb-10">Skills & Abilities</h2>
+    <div class="grid grid-cols-2 sm:grid-cols-3 gap-6">
+      {
+        skills.map((skill) => (
+          <div class="bg-white px-5 py-10 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200">
+            <div class="flex justify-between mb-2">
+              <span class="font-semibold text-purple-700">{skill.name}</span>
+              <span class="text-gray-500">{skill.level}%</span>
+            </div>
+
+            <div class="w-full bg-white rounded-full h-3 shadow-inner">
+              <div
+                class="h-3 rounded-full bg-linear-to-r from-purple-500 to-pink-500"
+                style={`width: ${skill.level}%`}
+              />
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
