@@ -1,5 +1,7 @@
 ---
 import { Github, Instagram, Linkedin } from "@lucide/astro";
+import aboutImage from "../assets/about_image.jpg";
+import { Image } from "astro:assets";
 ---
 
 <section id="about" class="bg-white py-24 px-8">
@@ -10,8 +12,8 @@ import { Github, Instagram, Linkedin } from "@lucide/astro";
 
     <div class="grid md:grid-cols-5 gap-12 items-start">
       <div class="md:col-span-2">
-        <img
-          src="/about_image.jpg"
+        <Image
+          src={aboutImage}
           alt="Felix Lee"
           class="w-full rounded-lg mb-6"
         />
