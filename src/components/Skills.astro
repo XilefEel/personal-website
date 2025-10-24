@@ -1,4 +1,6 @@
 ---
+import SkillCard from "./SkillCard.astro";
+
 const skillCategories = [
   {
     category: "Languages",
@@ -43,47 +45,7 @@ const skillCategories = [
     </p>
 
     <div class="space-y-12">
-      {
-        skillCategories.map((category) => (
-          <div>
-            <h3 class="text-xl md:text-2xl font-semibold text-purple-600 mb-6">
-              {category.category}
-            </h3>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {category.skills.map((skill) => (
-                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300">
-                  <div class="flex items-center gap-3 mb-3">
-                    <img
-                      src={`https://cdn.simpleicons.org/${skill.icon}`}
-                      alt={`${skill.name} logo`}
-                      class="w-8 h-8"
-                    />
-                    <span class="font-semibold text-gray-800 text-lg flex-1">
-                      {skill.name}
-                    </span>
-                    <span class="text-xs font-medium px-3 py-1 rounded-full text-white bg-purple-500">
-                      {skill.level}%
-                    </span>
-                  </div>
-
-                  <div class="w-full bg-gray-200 rounded-full overflow-hidden">
-                    <div
-                      class="h-2.5 shadow-inner rounded-full bg-linear-to-r from-purple-500 to-pink-500 transition-all duration-1000 ease-out"
-                      style={`width: ${skill.level}%`}
-                    />
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        ))
-      }
-    </div>
-
-    <div class="mt-12 text-center">
-      <p class="text-gray-600 text-sm">
-        Always learning and exploring new technologies!
-      </p>
+      {skillCategories.map((category) => <SkillCard category={category} />)}
     </div>
   </div>
 </section>

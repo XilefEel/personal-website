@@ -1,5 +1,6 @@
 ---
 import { ExternalLink, Github } from "@lucide/astro";
+import ProjectCard from "./ProjectCard.astro";
 const projects = [
   {
     title: "MindNest",
@@ -40,43 +41,7 @@ const projects = [
       Check out some of the projects I've worked on.
     </p>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {
-        projects.map((project) => (
-          <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl duration-200 transition">
-            <div class={`h-48 bg-linear-to-br ${project.gradient} relative`}>
-              <div class="absolute top-3 right-3 bg-white text-xs px-3 py-1 rounded-full font-semibold text-gray-800">
-                {project.status}
-              </div>
-            </div>
-            <div class="p-6">
-              <h3 class="text-xl font-semibold mb-2">{project.title}</h3>
-              <p class="text-gray-600 text-sm mb-4">{project.description}</p>
-
-              <div class="space-y-3">
-                <div class="flex flex-wrap gap-2">
-                  {project.tech.map((tech) => (
-                    <span class="text-xs bg-purple-100 text-purple-600 px-3 py-1 rounded-full">
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-                <div class="border-t pt-2 border-gray-100">
-                  <a
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={`View ${project.title} on GitHub`}
-                    class="flex items-center gap-2 text-sm font-medium text-purple-600 hover:text-purple-800 transition-colors"
-                  >
-                    <Github class="w-4 h-4" />
-                    <span>View Code</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        ))
-      }
+      {projects.map((project) => <ProjectCard project={project} />)}
     </div>
     <div class="text-center flex justify-center mt-10">
       <a
