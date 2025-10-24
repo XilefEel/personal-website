@@ -6,50 +6,55 @@ const education = [
     school: "BINUS University",
     degree: "Computer Science - Global Class",
     year: "2025 - Present",
-    location: "Jakarta, Indonesia",
+    location: "Kota Tangerang, Indonesia",
   },
   {
     school: "SMA Citra Berkat Tangerang",
     degree: "High School",
     year: "2022 - 2025",
-    location: "Tangerang, Indonesia",
+    location: "Kab. Tangerang, Indonesia",
   },
   {
     school: "SMP Gita Bangsa School",
     degree: "Junior High school",
     year: "2019 - 2022",
-    location: "Tangerang, Indonesia",
+    location: "Kab. Tangerang, Indonesia",
   },
 ];
 ---
 
-<section id="education" class="bg-gray-50 py-24 px-8">
+<section id="education" class="bg-gray-50 py-12 px-8 md:py-24">
   <div class="max-w-4xl mx-auto">
     <h2 class="text-4xl font-bold text-center text-purple-600 mb-8">
       My Education
     </h2>
 
     <div class="relative">
-      <div class="absolute left-8 top-0 bottom-0 w-0.5 bg-purple-200"></div>
+      <div class="absolute left-6 md:left-8 top-0 bottom-0 w-0.5 bg-purple-200">
+      </div>
 
       <div class="space-y-6">
         {
           education.map((edu) => (
-            <div class="relative pl-20">
-              <div class="absolute left-6 top-6 w-5 h-5 rounded-full bg-purple-500 border-4 border-white shadow" />
+            <div class="relative pl-14 md:pl-20">
+              <div class="absolute left-4 md:left-6 top-6 w-5 h-5 rounded-full bg-purple-500 border-4 border-white shadow" />
 
               <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition">
-                <div class="flex items-center gap-2 text-gray-500 text-sm mb-2">
+                <div class="flex items-center gap-2 text-gray-500 text-xs md:text-sm mb-2">
                   <Calendar size={16} />
                   <span>{edu.year}</span>
                 </div>
 
-                <h3 class="text-2xl font-bold text-purple-600 mb-1">
+                <h3 class="md:text-2xl text-xl font-bold text-purple-600 mb-1">
                   {edu.school}
                 </h3>
 
-                <p class="text-gray-700 font-medium mb-1">{edu.degree}</p>
-                <p class="text-gray-500 text-sm mb-4">{edu.location}</p>
+                <p class="text-gray-700 md:text-base text-sm font-medium mb-1">
+                  {edu.degree}
+                </p>
+                <p class="text-gray-500 text-xs md:text-sm mb-4">
+                  {edu.location}
+                </p>
               </div>
             </div>
           ))

@@ -4,7 +4,7 @@ import aboutImage from "../assets/about_image.jpg";
 import { Image } from "astro:assets";
 ---
 
-<section id="about" class="bg-white py-24 px-8">
+<section id="about" class="bg-white py-12 px-8 md:py-24">
   <div class="max-w-5xl mx-auto">
     <h2 class="text-4xl flex justify-center text-purple-500 font-bold mb-6">
       About Me
@@ -21,7 +21,7 @@ import { Image } from "astro:assets";
 
       <div class="md:col-span-3 space-y-6">
         <div>
-          <p class="text-gray-700 text-lg leading-relaxed">
+          <p class="text-gray-700 md:text-lg leading-relaxed">
             I'm a computer science undergraduate at BINUS University interested
             in full-stack development. I'm passionate about crafting clean,
             minimal, and beautiful software that prioritizes user experience.
@@ -32,7 +32,7 @@ import { Image } from "astro:assets";
         </div>
 
         <div class="bg-purple-50 border-l-4 border-purple-600 p-5 rounded-lg">
-          <p class="text-gray-800 leading-relaxed">
+          <p class="text-gray-800 md:text-base text-sm leading-relaxed">
             <span class="font-semibold">Currently building</span>
             <span class="font-semibold text-purple-600"> MindNest</span>, an
             all-in-one full-stack productivity tool designed to help people
@@ -48,7 +48,9 @@ import { Image } from "astro:assets";
           </p>
         </div>
 
-        <div class="bg-linear-to-r from-purple-100 to-pink-100 p-5 rounded-xl">
+        <div
+          class="bg-linear-to-r md:text-base text-sm from-purple-100 to-pink-100 p-5 rounded-xl"
+        >
           <h4 class="text-xl font-bold mb-2">Fun Facts!</h4>
           <ul class="space-y-2">
             <li>✨ I can solve a Rubik's cube in under 30 seconds</li>
