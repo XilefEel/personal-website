@@ -1,38 +1,87 @@
 ---
-const skills = [
-  { name: "Python", level: 85 },
-  { name: "TypeScript", level: 80 },
-  { name: "HTML", level: 90 },
-  { name: "CSS", level: 80 },
-  { name: "React", level: 85 },
-  { name: "Vue.js", level: 65 },
-  { name: "Astro", level: 70 },
-  { name: "Rust", level: 50 },
-  { name: "SQLite", level: 75 },
+const skillCategories = [
+  {
+    category: "Languages",
+    skills: [
+      { name: "Python", level: 85, icon: "python" },
+      {
+        name: "TypeScript",
+        level: 80,
+
+        icon: "typescript",
+      },
+      { name: "Rust", level: 50, icon: "rust" },
+    ],
+  },
+  {
+    category: "Frontend",
+    skills: [
+      { name: "HTML", level: 90, icon: "html5" },
+      { name: "CSS", level: 80, icon: "css3" },
+      { name: "React", level: 85, icon: "react" },
+      { name: "Vue.js", level: 65, icon: "vuedotjs" },
+      { name: "Astro", level: 70, icon: "astro" },
+    ],
+  },
+  {
+    category: "Tools & Databases",
+    skills: [
+      { name: "SQLite", level: 65, icon: "sqlite" },
+      { name: "Git", level: 70, icon: "git" },
+      { name: "Tauri", level: 55, icon: "tauri" },
+    ],
+  },
 ];
 ---
 
-<section id="skills" class="bg-purple-100 py-24 px-8">
-  <div class="max-w-5xl mx-auto text-center">
-    <h2 class="text-4xl font-bold mb-10">Skills & Abilities</h2>
-    <div class="grid grid-cols-2 sm:grid-cols-3 gap-6">
-      {
-        skills.map((skill) => (
-          <div class="bg-white px-5 py-10 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200">
-            <div class="flex justify-between mb-2">
-              <span class="font-semibold text-purple-700">{skill.name}</span>
-              <span class="text-gray-500">{skill.level}%</span>
-            </div>
+<section id="skills" class="bg-purple-50 py-24 px-8">
+  <div class="max-w-5xl mx-auto">
+    <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">
+      Skills & Technologies
+    </h2>
 
-            <div class="w-full bg-white rounded-full h-3 shadow-inner">
-              <div
-                class="h-3 rounded-full bg-linear-to-r from-purple-500 to-pink-500"
-                style={`width: ${skill.level}%`}
-              />
+    <div class="space-y-12">
+      {
+        skillCategories.map((category) => (
+          <div>
+            <h1 class="text-2xl font-semibold text-purple-600 mb-6">
+              {category.category}
+            </h1>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {category.skills.map((skill) => (
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300">
+                  <div class="flex items-center gap-3 mb-3">
+                    <img
+                      src={`https://cdn.simpleicons.org/${skill.icon}`}
+                      alt={`${skill.name} logo`}
+                      class="w-8 h-8"
+                    />
+                    <span class="font-semibold text-gray-800 text-lg flex-1">
+                      {skill.name}
+                    </span>
+                    <span class="text-xs font-medium px-3 py-1 rounded-full text-white bg-purple-500">
+                      {skill.level}%
+                    </span>
+                  </div>
+
+                  <div class="w-full bg-gray-200 rounded-full overflow-hidden">
+                    <div
+                      class="h-2.5 shadow-inner rounded-full bg-linear-to-r from-purple-500 to-pink-500 transition-all duration-1000 ease-out"
+                      style={`width: ${skill.level}%`}
+                    />
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         ))
       }
+    </div>
+
+    <div class="mt-12 text-center">
+      <p class="text-gray-600 text-sm">
+        Always learning and exploring new technologies!
+      </p>
     </div>
   </div>
 </section>

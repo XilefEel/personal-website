@@ -1,5 +1,5 @@
 ---
-import { Github } from "@lucide/astro";
+import { ExternalLink, Github } from "@lucide/astro";
 const projects = [
   {
     title: "MindNest",
@@ -8,20 +8,25 @@ const projects = [
     gradient: "from-blue-500 to-purple-600",
     link: "https://github.com/XilefEel/MindNest",
     tech: ["React", "Rust", "Tauri"],
+    status: "In Progress",
   },
   {
     title: "Nemos",
-    description: "A mobile app to help solve injustice",
+    description:
+      "A mobile app to help solve the injustice happening in Indonesia",
     gradient: "from-green-500 to-teal-600",
-    link: "https://github.com/XilefEel/Insecticide",
+    link: "https://github.com/G3310-dev/Nemos",
     tech: ["Flutter", "Dart", "Firebase"],
+    status: "Completed",
   },
   {
     title: "Insecticide",
-    description: "A platformer game where you shoot down insects",
+    description:
+      "A simple platformer game where you shoot down insects as a cute purple cat.",
     gradient: "from-orange-500 to-red-600",
-    link: "https://github.com/G3310-dev/Nemos",
+    link: "https://github.com/XilefEel/Insecticide",
     tech: ["Python", "Pygame"],
+    status: "Completed",
   },
 ];
 ---
@@ -32,8 +37,12 @@ const projects = [
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
       {
         projects.map((project) => (
-          <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition">
-            <div class={`h-48 bg-linear-to-br ${project.gradient}`} />
+          <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl duration-200 transition">
+            <div class={`h-48 bg-linear-to-br ${project.gradient} relative`}>
+              <div class="absolute top-3 right-3 bg-white text-xs px-3 py-1 rounded-full font-semibold text-gray-800">
+                {project.status}
+              </div>
+            </div>
             <div class="p-6">
               <h3 class="text-xl font-semibold mb-2">{project.title}</h3>
               <p class="text-gray-600 text-sm mb-4">{project.description}</p>
@@ -56,6 +65,18 @@ const projects = [
           </div>
         ))
       }
+    </div>
+    <div class="text-center flex justify-center mt-10">
+      <a
+        href="https://github.com/XilefEel"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="flex items-center gap-2 px-6 py-3 bg-purple-600 text-white font-semibold rounded-lg hover:bg-purple-700 transition-colors duration-200 shadow-md hover:shadow-lg"
+      >
+        <Github class="size-5" />
+        <span>View All Projects on GitHub</span>
+        <ExternalLink class="w-4 h-4" />
+      </a>
     </div>
   </div>
 </section>
