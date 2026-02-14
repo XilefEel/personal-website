@@ -1,5 +1,4 @@
 ---
-import SkillCard from "./SkillCard.astro";
 import astro from "../assets/icons/astro.svg";
 import c from "../assets/icons/c.svg";
 import css from "../assets/icons/css.svg";
@@ -14,11 +13,14 @@ import sqlite from "../assets/icons/sqlite.svg";
 import tauri from "../assets/icons/tauri.svg";
 import typescript from "../assets/icons/typescript.svg";
 import vue from "../assets/icons/vue.svg";
+import TechCard from "./TechCard.astro";
 
-const skillCategories = [
+const techCategories = [
   {
     category: "Languages",
-    skills: [
+    techs: [
+      { name: "HTML", icon: html },
+      { name: "CSS", icon: css },
       { name: "Python", icon: python },
       { name: "TypeScript", icon: typescript },
       { name: "Rust", icon: rust },
@@ -27,38 +29,46 @@ const skillCategories = [
     ],
   },
   {
-    category: "Frontend",
-    skills: [
-      { name: "HTML", icon: html },
-      { name: "CSS", icon: css },
+    category: "Frameworks & Libraries",
+    techs: [
       { name: "React", icon: react },
       { name: "Vue.js", icon: vue },
       { name: "Astro", icon: astro },
+      { name: "Tauri", icon: tauri },
       { name: "Flutter", icon: flutter },
     ],
   },
   {
     category: "Tools & Databases",
-    skills: [
+    techs: [
       { name: "SQLite", icon: sqlite },
       { name: "Git", icon: git },
-      { name: "Tauri", icon: tauri },
     ],
   },
 ];
 ---
 
-<section id="skills" class="bg-purple-50 py-12 px-6 md:px-8 md:py-24">
+<section id="tech" class="bg-purple-50 px-8 md:px-12 py-16">
   <div class="max-w-5xl mx-auto">
-    <h2 class="text-3xl md:text-4xl font-bold text-center mb-1 text-gray-800">
-      Skills & Technologies
+    <h2 class="text-3xl md:text-4xl mb-12 font-bold text-center text-gray-800">
+      Tech Stack
     </h2>
-    <p class="md:text-base text-sm text-gray-700 mb-12 text-center">
-      Here are some of the technologies I've worked with.
-    </p>
 
-    <div class="space-y-12">
-      {skillCategories.map((category) => <SkillCard category={category} />)}
+    <div class="flex flex-col gap-10">
+      {
+        techCategories.map((category) => (
+          <div>
+            <h3 class="text-lg font-semibold text-purple-600 mb-3">
+              {category.category}
+            </h3>
+            <div class="flex flex-wrap gap-4">
+              {category.techs.map((tech: { icon: any; name: string }) => (
+                <TechCard tech={tech} />
+              ))}
+            </div>
+          </div>
+        ))
+      }
     </div>
   </div>
 </section>
