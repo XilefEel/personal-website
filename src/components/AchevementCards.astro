@@ -4,21 +4,21 @@ const { achievement } = Astro.props;
 ---
 
 <div
-  class="bg-white hover:scale-[1.02] rounded-xl shadow-md overflow-hidden hover:shadow-xl duration-200 transition"
+  class="overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm transition duration-200 hover:scale-[1.02] hover:border-purple-500 hover:shadow-md"
 >
-  <div class="w-full bg-gray-50 flex justify-center items-center p-3">
+  <div class="flex w-full items-center justify-center bg-gray-50 p-3">
     <Image
       src={achievement.src}
       alt={achievement.title}
-      class="max-h-72 w-auto object-contain rounded-md"
+      class="max-h-72 w-auto rounded-md object-contain"
       loading="lazy"
     />
   </div>
-  <div class="p-5 flex-1 flex flex-col">
+  <div class="flex flex-1 flex-col p-5">
     <h3 class="text-xl font-semibold text-purple-600">
       {achievement.title}
     </h3>
-    <p class="text-gray-600 mt-2 text-sm">
+    <p class="mt-2 text-sm text-gray-600">
       {achievement.description}
     </p>
   </div>

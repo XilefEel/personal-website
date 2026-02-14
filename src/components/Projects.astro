@@ -8,7 +8,7 @@ const projects = [
       "An all-in-one desktop productivity app to organize thoughts and tasks seamlessly.",
     gradient: "from-blue-500 to-purple-600",
     link: "https://github.com/XilefEel/MindNest",
-    tech: ["React", "Rust", "Tauri"],
+    tech: ["React", "TypeScript", "Rust", "Tauri"],
     status: "In Progress",
   },
   {
@@ -21,38 +21,35 @@ const projects = [
     status: "Completed",
   },
   {
-    title: "Cascade",
+    title: "Commitly",
     description:
-      "A mobile timer app with features like simultaneous timers and cascading timers",
+      "A desktop app that visualizes your GitHub repos and commits in a beautiful way.",
     gradient: "from-orange-500 to-red-600",
-    link: "https://github.com/XilefEel/Cascade",
-    tech: ["Flutter", "Dart"],
+    link: "https://github.com/XilefEel/Commitly",
+    tech: ["React", "TypeScript", "Rust", "Tauri"],
     status: "In Progress",
   },
 ];
 ---
 
-<section id="projects" class="py-12 px-6 md:px-8 md:py-24 bg-purple-50">
-  <div class="max-w-6xl mx-auto">
-    <h3 class="text-3xl md:text-4xl font-bold mb-1 text-center">
+<section id="projects" class="bg-purple-50 px-8 py-16 md:px-12">
+  <div class="mx-auto max-w-6xl">
+    <h3 class="mb-12 text-center text-3xl font-bold md:text-4xl">
       Featured Projects
     </h3>
-    <p class="md:text-base text-sm text-gray-700 mb-12 text-center">
-      Check out some of the projects I've worked on.
-    </p>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div class="mb-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
       {projects.map((project) => <ProjectCard project={project} />)}
     </div>
-    <div class="text-center flex justify-center mt-10">
+    <div class="flex justify-center text-center">
       <a
         href="https://github.com/XilefEel"
         target="_blank"
         rel="noopener noreferrer"
-        class="flex items-center gap-2 px-6 py-3 bg-purple-600 text-white font-semibold rounded-lg hover:bg-purple-700 transition-colors duration-200 shadow-md hover:shadow-lg"
+        class="flex items-center gap-2 rounded-xl bg-purple-600 px-6 py-3 font-semibold text-white shadow-md transition-colors duration-200 hover:bg-purple-700 hover:shadow-lg"
       >
         <Github class="size-5" />
         <span>View All Projects on GitHub</span>
-        <ExternalLink class="w-4 h-4" />
+        <ExternalLink class="h-4 w-4" />
       </a>
     </div>
   </div>

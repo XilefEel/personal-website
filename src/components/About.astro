@@ -3,27 +3,27 @@ import aboutImage from "../assets/about_image.jpg";
 import { Image } from "astro:assets";
 ---
 
-<section id="about" class="bg-white min-h-screen py-16 px-8">
-  <div class="max-w-5xl mx-auto">
-    <h2 class="text-4xl flex justify-center text-purple-500 font-bold mb-8">
+<section id="about" class="min-h-screen bg-white px-8 py-16">
+  <div class="mx-auto max-w-5xl">
+    <h2 class="mb-8 flex justify-center text-4xl font-bold text-purple-500">
       About Me
     </h2>
 
-    <div class="grid md:grid-cols-5 gap-12 items-center">
+    <div class="grid items-center gap-12 md:grid-cols-5">
       <div class="md:col-span-2">
         <Image
           src={aboutImage}
           alt="Felix Lee"
-          class="w-full rounded-lg shadow-lg object-cover"
+          class="w-full rounded-lg object-cover shadow-lg"
           loading="lazy"
         />
       </div>
 
-      <div class="md:col-span-3 space-y-6">
+      <div class="space-y-6 md:col-span-3">
         <div
-          class="bg-white shadow border-l-4 border-purple-600 p-5 rounded-lg"
+          class="rounded-lg border-l-4 border-purple-600 bg-white p-5 shadow"
         >
-          <p class="text-gray-800 md:text-base text-sm leading-relaxed">
+          <p class="text-sm leading-relaxed text-gray-800 md:text-base">
             I'm a CS student at BINUS University who loves building full-stack
             apps that are clean, functional, and actually enjoyable to use. I
             believe great software should feel like a breath of fresh air.
@@ -31,18 +31,18 @@ import { Image } from "astro:assets";
         </div>
 
         <div
-          class="p-5 rounded-xl flex flex-col gap-3 bg-linear-to-br from-purple-600 to-purple-700 text-white shadow"
+          class="flex flex-col gap-3 rounded-xl bg-linear-to-br from-purple-600 to-purple-700 p-5 text-white shadow"
         >
           <div class="flex items-center gap-2">
-            <div class="w-2 h-2 bg-green-400 rounded-full"></div>
-            <span class="text-sm font-semibold uppercase tracking-wide"
+            <div class="h-2 w-2 rounded-full bg-green-400"></div>
+            <span class="text-sm font-semibold tracking-wide uppercase"
               >Currently Building</span
             >
           </div>
 
           <h3 class="text-2xl font-bold">🧠 MindNest</h3>
 
-          <p class="text-purple-50 leading-relaxed md:text-base text-sm">
+          <p class="text-sm leading-relaxed text-purple-50 md:text-base">
             A full-stack productivity tool for organizing thoughts and tasks. <br
             />
             Fast, lightweight, and beautiful.
@@ -50,28 +50,28 @@ import { Image } from "astro:assets";
 
           <div class="flex flex-wrap gap-2">
             <span
-              class="px-3 py-0.5 bg-white/30 backdrop-blur-sm rounded-full text-sm"
+              class="rounded-full bg-white/30 px-3 py-0.5 text-sm backdrop-blur-sm"
               >React</span
             >
             <span
-              class="px-3 py-0.5 bg-white/30 backdrop-blur-sm rounded-full text-sm"
+              class="rounded-full bg-white/30 px-3 py-0.5 text-sm backdrop-blur-sm"
               >TailwindCSS</span
             >
             <span
-              class="px-3 py-0.5 bg-white/30 backdrop-blur-sm rounded-full text-sm"
+              class="rounded-full bg-white/30 px-3 py-0.5 text-sm backdrop-blur-sm"
               >Tauri</span
             >
             <span
-              class="px-3 py-0.5 bg-white/30 backdrop-blur-sm rounded-full text-sm"
+              class="rounded-full bg-white/30 px-3 py-0.5 text-sm backdrop-blur-sm"
               >Rust</span
             >
           </div>
         </div>
 
         <div
-          class="bg-linear-to-r md:text-base shadow text-sm from-purple-100 to-pink-100 p-5 rounded-xl"
+          class="rounded-xl bg-linear-to-r from-purple-100 to-pink-100 p-5 text-sm shadow md:text-base"
         >
-          <h4 class="text-xl font-semibold mb-2">A few things about me</h4>
+          <h4 class="mb-2 text-xl font-semibold">A few things about me</h4>
           <ul class="flex flex-col gap-1.5 text-gray-800">
             <li>🧩 I can solve a Rubik's cube in under 30 seconds</li>
             <li>🗺️ I'm learning Chinese in my free time (你好!)</li>
