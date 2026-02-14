@@ -1,6 +1,7 @@
 ---
 import profileImage from "../assets/profile_image.jpg";
 import { Image } from "astro:assets";
+import SocialLinks from "./SocialLinks.astro";
 ---
 
 <section
@@ -8,13 +9,14 @@ import { Image } from "astro:assets";
   class="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-6 md:px-8 md:py-24"
 >
   <div class="mx-auto flex flex-col md:flex-row items-center gap-12 px-6">
-    <div class="text-center md:text-left">
-      <h1 class="text-5xl font-bold mb-4">
+    <div class="text-center md:text-left flex flex-col gap-4">
+      <h1 class="text-5xl font-bold">
         Hi, I'm <span class="text-purple-600">Felix Lee</span>
       </h1>
-      <p class="text-lg text-gray-700 mb-6">
+      <p class="text-lg text-gray-700">
         An undergraduate at BINUS University<br /> passionate about full-stack development
       </p>
+      <SocialLinks size={30} />
     </div>
 
     <div class="flex justify-center">

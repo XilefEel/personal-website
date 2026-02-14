@@ -1,16 +1,15 @@
 ---
 import aboutImage from "../assets/about_image.jpg";
 import { Image } from "astro:assets";
-import SocialLinks from "./SocialLinks.astro";
 ---
 
-<section id="about" class="bg-white py-12 px-8 md:py-24">
+<section id="about" class="bg-white min-h-screen py-16 px-6">
   <div class="max-w-5xl mx-auto">
-    <h2 class="text-4xl flex justify-center text-purple-500 font-bold mb-6">
+    <h2 class="text-4xl flex justify-center text-purple-500 font-bold mb-8">
       About Me
     </h2>
 
-    <div class="grid md:grid-cols-5 gap-12 items-start">
+    <div class="grid md:grid-cols-5 gap-12 items-center">
       <div class="md:col-span-2">
         <Image
           src={aboutImage}
@@ -21,44 +20,65 @@ import SocialLinks from "./SocialLinks.astro";
       </div>
 
       <div class="md:col-span-3 space-y-6">
-        <div>
-          <p class="text-gray-700 md:text-lg leading-relaxed">
-            I'm a computer science undergraduate at BINUS University interested
-            in full-stack development. I'm passionate about creating clean,
-            minimal, and beautiful software that prioritizes user experience.
-            For me, simplicity is the key to creating great software.
-          </p>
-        </div>
-
-        <div class="bg-purple-50 border-l-4 border-purple-600 p-5 rounded-lg">
+        <div
+          class="bg-white shadow border-l-4 border-purple-600 p-5 rounded-lg"
+        >
           <p class="text-gray-800 md:text-base text-sm leading-relaxed">
-            <span class="font-semibold">Currently building</span>
-            <span class="font-semibold text-purple-600"> MindNest</span>, an
-            all-in-one full-stack productivity tool designed to help people
-            organize their thoughts and tasks. Built with <span
-              class="font-semibold text-purple-600"
-            >
-              Rust and Tauri
-            </span> for a lightweight desktop experience and <span
-              class="font-semibold text-purple-600"
-            >
-              React, TailwindCSS, and Shadcn UI
-            </span> for a dynamic and beautiful UI.
+            I'm a CS student at BINUS University who loves building full-stack
+            apps that are clean, functional, and actually enjoyable to use. I
+            believe great software should feel like a breath of fresh air.
           </p>
         </div>
 
         <div
-          class="bg-linear-to-r md:text-base text-sm from-purple-100 to-pink-100 p-5 rounded-xl"
+          class="p-5 rounded-xl flex flex-col gap-3 bg-linear-to-br from-purple-600 to-purple-700 text-white shadow"
         >
-          <h4 class="text-xl font-bold mb-2">Fun Facts!</h4>
-          <ul class="space-y-2">
-            <li>✨ I can solve a Rubik's cube in under 30 seconds</li>
-            <li>✨ I'm learning Chinese in my free time (你好!)</li>
-            <li>✨ I love exploring new technologies and frameworks</li>
+          <div class="flex items-center gap-2">
+            <div class="w-2 h-2 bg-green-400 rounded-full"></div>
+            <span class="text-sm font-semibold uppercase tracking-wide"
+              >Currently Building</span
+            >
+          </div>
+
+          <h3 class="text-2xl font-bold">🧠 MindNest</h3>
+
+          <p class="text-purple-50 leading-relaxed md:text-base text-sm">
+            A full-stack productivity tool for organizing thoughts and tasks. <br
+            />
+            Fast, lightweight, and beautiful.
+          </p>
+
+          <div class="flex flex-wrap gap-2">
+            <span
+              class="px-3 py-0.5 bg-white/20 backdrop-blur-sm rounded-full text-sm"
+              >React</span
+            >
+            <span
+              class="px-3 py-0.5 bg-white/20 backdrop-blur-sm rounded-full text-sm"
+              >TailwindCSS</span
+            >
+            <span
+              class="px-3 py-0.5 bg-white/20 backdrop-blur-sm rounded-full text-sm"
+              >Tauri</span
+            >
+            <span
+              class="px-3 py-0.5 bg-white/20 backdrop-blur-sm rounded-full text-sm"
+              >Rust</span
+            >
+          </div>
+        </div>
+
+        <div
+          class="bg-linear-to-r md:text-base shadow text-sm from-purple-100 to-pink-100 p-5 rounded-xl"
+        >
+          <h4 class="text-xl font-bold mb-2">A few things about me</h4>
+          <ul class="flex flex-col gap-1.5 text-gray-800">
+            <li>🧩 I can solve a Rubik's cube in under 30 seconds</li>
+            <li>🗺️ I'm learning Chinese in my free time (你好!)</li>
+            <li>💪 I can do clean chin ups</li>
           </ul>
         </div>
       </div>
     </div>
-    <div class="mt-12"><SocialLinks size={30} /></div>
   </div>
 </section>
