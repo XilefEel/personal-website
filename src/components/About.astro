@@ -6,7 +6,7 @@ import { Image } from "astro:assets";
 <section id="about" class="bg-white px-8 pt-16 md:px-12 md:pt-20">
   <div class="mx-auto max-w-5xl">
     <h2
-      class="fade-in mb-8 flex justify-center text-4xl font-bold text-purple-500"
+      class="fade-in mb-8 flex justify-center text-4xl font-bold text-purple-600"
     >
       About Me
     </h2>
@@ -33,16 +33,17 @@ import { Image } from "astro:assets";
         </div>
 
         <div
-          class="fade-in flex flex-col gap-3 rounded-xl bg-linear-to-br from-purple-600 to-purple-700 p-5 text-white shadow"
+          class="fade-in flex flex-col gap-3 rounded-xl bg-linear-to-br from-purple-600 to-purple-700 p-5 shadow"
         >
           <div class="flex items-center gap-2">
             <div class="h-2 w-2 rounded-full bg-green-400"></div>
-            <span class="text-sm font-semibold tracking-wide uppercase"
+            <span
+              class="text-sm font-semibold tracking-wide text-purple-100 uppercase"
               >Currently Building</span
             >
           </div>
 
-          <h3 class="text-2xl font-bold">🧠 MindNest</h3>
+          <h3 class="text-2xl font-bold text-white">🧠 MindNest</h3>
 
           <p class="text-sm leading-relaxed text-purple-50 md:text-base">
             A full-stack productivity tool for organizing thoughts and tasks. <br
@@ -51,20 +52,16 @@ import { Image } from "astro:assets";
           </p>
 
           <div class="flex flex-wrap gap-2">
-            <span
-              class="rounded-full bg-white/30 px-3 py-0.5 text-sm backdrop-blur-sm"
+            <span class="rounded-full bg-white/20 px-3 py-1 text-sm text-white"
               >React</span
             >
-            <span
-              class="rounded-full bg-white/30 px-3 py-0.5 text-sm backdrop-blur-sm"
+            <span class="rounded-full bg-white/20 px-3 py-1 text-sm text-white"
               >TailwindCSS</span
             >
-            <span
-              class="rounded-full bg-white/30 px-3 py-0.5 text-sm backdrop-blur-sm"
+            <span class="rounded-full bg-white/20 px-3 py-1 text-sm text-white"
               >Tauri</span
             >
-            <span
-              class="rounded-full bg-white/30 px-3 py-0.5 text-sm backdrop-blur-sm"
+            <span class="rounded-full bg-white/20 px-3 py-1 text-sm text-white"
               >Rust</span
             >
           </div>
@@ -73,7 +70,9 @@ import { Image } from "astro:assets";
         <div
           class="fade-in rounded-xl bg-linear-to-r from-purple-100 to-pink-100 p-5 text-sm shadow md:text-base"
         >
-          <h4 class="mb-2 text-xl font-semibold">A few things about me</h4>
+          <h4 class="mb-2 text-xl font-semibold text-gray-900">
+            A few things about me
+          </h4>
           <ul class="flex flex-col gap-1.5 text-gray-800">
             <li>🧩 I can solve a Rubik's cube in under 30 seconds</li>
             <li>🗺️ I'm learning Chinese in my free time (你好!)</li>
