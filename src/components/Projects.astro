@@ -1,31 +1,32 @@
 ---
 import { ExternalLink, Github } from "@lucide/astro";
 import ProjectCard from "./ProjectCard.astro";
+
 const projects = [
   {
     title: "MindNest",
     description:
-      "An all-in-one desktop productivity app to organize thoughts and tasks seamlessly.",
+      "A desktop app for organizing your thoughts and tasks, all in one place.",
     gradient: "from-blue-500 to-purple-600",
     link: "https://github.com/XilefEel/MindNest",
     tech: ["React", "TypeScript", "Rust", "Tauri"],
     status: "In Progress",
   },
   {
-    title: "Nemos",
+    title: "Minecraft Clone",
     description:
-      "A mobile app to help solve the injustice happening in Indonesia",
+      "A browser-based Minecraft clone built with Three.js and a Rust WebSocket server.",
     gradient: "from-green-500 to-teal-600",
-    link: "https://github.com/G3310-dev/Nemos",
-    tech: ["Flutter", "Dart", "Firebase"],
-    status: "Completed",
+    link: "https://github.com/XilefEel/Minecraft-Clone",
+    tech: ["Typescript", "Three.js", "Rust"],
+    status: "In Progress",
   },
   {
-    title: "Commitly",
+    title: "Moss.md",
     description:
-      "A desktop app that visualizes your GitHub repos and commits in a beautiful way.",
+      "A simple and lightweight desktop Markdown previewer and editor",
     gradient: "from-orange-500 to-red-600",
-    link: "https://github.com/XilefEel/Commitly",
+    link: "https://github.com/XilefEel/moss-md",
     tech: ["React", "TypeScript", "Rust", "Tauri"],
     status: "In Progress",
   },
@@ -33,13 +34,21 @@ const projects = [
 ---
 
 <section id="projects">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"
-    ><path
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 1440 320"
+    preserveAspectRatio="none"
+    class="block w-full"
+    style="margin-bottom: -1px;"
+  >
+    <path
       fill="#ad46ff"
       fill-opacity="1"
       d="M0,32L40,37.3C80,43,160,53,240,85.3C320,117,400,171,480,176C560,181,640,139,720,117.3C800,96,880,96,960,106.7C1040,117,1120,139,1200,128C1280,117,1360,75,1400,53.3L1440,32L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"
-    ></path></svg
-  >
+    >
+    </path>
+  </svg>
+
   <div class="bg-purple-500 px-8 pb-16 md:px-12 md:pb-20">
     <div class="mx-auto max-w-6xl">
       <h3
@@ -47,9 +56,11 @@ const projects = [
       >
         Featured Projects
       </h3>
+
       <div class="mb-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
         {projects.map((project) => <ProjectCard project={project} />)}
       </div>
+
       <div class="fade-in flex justify-center text-center">
         <a
           href="https://github.com/XilefEel"

@@ -1,9 +1,6 @@
 ---
 import astro from "../assets/icons/astro.svg";
-import c from "../assets/icons/c.svg";
 import css from "../assets/icons/css.svg";
-import dart from "../assets/icons/dart.svg";
-import flutter from "../assets/icons/flutter.svg";
 import git from "../assets/icons/git.svg";
 import html from "../assets/icons/html.svg";
 import python from "../assets/icons/python.svg";
@@ -12,52 +9,43 @@ import rust from "../assets/icons/rust.svg";
 import sqlite from "../assets/icons/sqlite.svg";
 import tauri from "../assets/icons/tauri.svg";
 import typescript from "../assets/icons/typescript.svg";
-import vue from "../assets/icons/vue.svg";
 import TechBadge from "./TechBadge.astro";
 
 const techCategories = [
-  {
-    category: "Languages",
-    techs: [
-      { name: "HTML", icon: html },
-      { name: "CSS", icon: css },
-      { name: "Python", icon: python },
-      { name: "TypeScript", icon: typescript },
-      { name: "Rust", icon: rust },
-      { name: "C", icon: c },
-      { name: "Dart", icon: dart },
-    ],
-  },
-  {
-    category: "Frameworks & Libraries",
-    techs: [
-      { name: "React", icon: react },
-      { name: "Vue.js", icon: vue },
-      { name: "Astro", icon: astro },
-      { name: "Tauri", icon: tauri },
-      { name: "Flutter", icon: flutter },
-    ],
-  },
-  {
-    category: "Tools & Databases",
-    techs: [
-      { name: "SQLite", icon: sqlite },
-      { name: "Git", icon: git },
-    ],
-  },
+  [
+    { name: "HTML", icon: html },
+    { name: "CSS", icon: css },
+    { name: "Python", icon: python },
+    { name: "TypeScript", icon: typescript },
+    { name: "Rust", icon: rust },
+  ],
+  [
+    { name: "React", icon: react },
+    { name: "Astro", icon: astro },
+    { name: "Tauri", icon: tauri },
+    { name: "SQLite", icon: sqlite },
+    { name: "Git", icon: git },
+  ],
 ];
 ---
 
 <section id="tech">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"
-    ><path
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 1440 320"
+    preserveAspectRatio="none"
+    class="block w-full"
+    style="margin-bottom: -1px;"
+  >
+    <path
       fill="#ad46ff"
       fill-opacity="1"
       d="M0,256L40,245.3C80,235,160,213,240,192C320,171,400,149,480,165.3C560,181,640,235,720,224C800,213,880,139,960,144C1040,149,1120,235,1200,272C1280,309,1360,299,1400,293.3L1440,288L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"
-    ></path></svg
-  >
+    >
+    </path>
+  </svg>
 
-  <div class="bg-purple-500 px-8 py-4 md:px-12">
+  <div class="bg-purple-500 px-8 py-12 md:px-12">
     <div class="mx-auto max-w-5xl">
       <h2
         class="fade-in mb-12 text-center text-3xl font-bold text-white md:text-4xl"
@@ -68,15 +56,10 @@ const techCategories = [
       <div class="flex flex-col gap-10 pb-8">
         {
           techCategories.map((category) => (
-            <div class="fade-in">
-              <h3 class="mb-3 text-lg font-semibold text-purple-50">
-                {category.category}
-              </h3>
-              <div class="flex flex-wrap gap-4">
-                {category.techs.map((tech: { icon: any; name: string }) => (
-                  <TechBadge tech={tech} />
-                ))}
-              </div>
+            <div class="fade-in flex flex-wrap justify-center gap-4">
+              {category.map((tech: { icon: any; name: string }) => (
+                <TechBadge tech={tech} />
+              ))}
             </div>
           ))
         }
@@ -85,12 +68,19 @@ const techCategories = [
   </div>
 
   <div class="bg-gray-50">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"
-      ><path
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 1440 320"
+      preserveAspectRatio="none"
+      class="block w-full"
+      style="margin-bottom: -1px;"
+    >
+      <path
         fill="#ad46ff"
         fill-opacity="1"
         d="M0,96L48,101.3C96,107,192,117,288,101.3C384,85,480,43,576,58.7C672,75,768,149,864,192C960,235,1056,245,1152,208C1248,171,1344,85,1392,42.7L1440,0L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
-      ></path></svg
-    >
+      >
+      </path>
+    </svg>
   </div>
 </section>
