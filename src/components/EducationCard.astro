@@ -11,7 +11,7 @@ const { edu } = Astro.props;
   </div>
 
   <div
-    class="overflow-hidden rounded-xl border border-gray-200 bg-white p-5 shadow-sm transition hover:scale-[1.02] hover:border-purple-500 hover:shadow-md"
+    class="overflow-hidden rounded-xl border border-gray-200 bg-white p-5 shadow-sm transition hover:scale-[1.01] hover:border-purple-500 hover:shadow-md"
   >
     <div class="mb-2 flex items-center gap-2 text-xs text-gray-500 md:text-sm">
       <Calendar size={16} />
@@ -25,6 +25,7 @@ const { edu } = Astro.props;
     <p class="mb-1 text-sm font-medium text-gray-700 md:text-base">
       {edu.degree}
     </p>
+
     <p class="text-xs text-gray-500 md:text-sm">
       {edu.location}
     </p>

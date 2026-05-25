@@ -6,7 +6,7 @@ const { project } = Astro.props;
 
 <div class="fade-in">
   <div
-    class="overflow-hidden rounded-xl border-2 border-white/20 bg-white shadow transition-transform hover:scale-[1.02] hover:border-white/40 hover:shadow-md"
+    class="overflow-hidden rounded-xl border-2 border-gray-200 bg-white shadow transition-transform hover:scale-[1.01] hover:border-white hover:shadow-md"
   >
     <div class={`h-48 bg-linear-to-br ${project.gradient} relative`}>
       <div
@@ -15,6 +15,7 @@ const { project } = Astro.props;
         {project.status}
       </div>
     </div>
+
     <div class="p-6">
       <h3 class="mb-2 text-xl font-semibold text-gray-900">{project.title}</h3>
       <p class="mb-4 text-sm text-gray-600">{project.description}</p>
@@ -29,6 +30,7 @@ const { project } = Astro.props;
             ))
           }
         </div>
+
         <div class="border-t border-gray-100 pt-2">
           <a
             href={project.link}

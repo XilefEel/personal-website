@@ -1,4 +1,5 @@
 ---
+import { MapPin, GraduationCap } from "@lucide/astro";
 import aboutImage from "../assets/about_image.jpg";
 import { Image } from "astro:assets";
 ---
@@ -11,7 +12,7 @@ import { Image } from "astro:assets";
       About Me
     </h2>
 
-    <div class="grid items-center gap-12 md:grid-cols-5">
+    <div class="grid items-center gap-12 md:grid-cols-6">
       <div class="md:col-span-2">
         <Image
           src={aboutImage}
@@ -21,65 +22,66 @@ import { Image } from "astro:assets";
         />
       </div>
 
-      <div class="flex flex-col gap-6 md:col-span-3">
-        <div
-          class="fade-in rounded-lg border-l-4 border-purple-600 bg-white p-5 shadow"
-        >
-          <p class="text-sm leading-relaxed text-gray-800 md:text-base">
-            I'm a CS student at BINUS University who loves building full-stack
-            apps that are clean, functional, and actually enjoyable to use. I
-            believe great software should feel like a breath of fresh air.
-          </p>
+      <div class="fade-in flex flex-col gap-6 md:col-span-4">
+        <div>
+          <p class="text-2xl font-semibold text-gray-900">Felix Lee</p>
+          <p class="text-sm text-gray-500">CS student at BINUS University</p>
         </div>
 
-        <div
-          class="fade-in flex flex-col gap-3 rounded-xl bg-linear-to-br from-purple-600 to-purple-700 p-5 shadow"
-        >
-          <div class="flex items-center gap-2">
-            <div class="h-2 w-2 rounded-full bg-green-400"></div>
-            <span
-              class="text-sm font-semibold tracking-wide text-purple-100 uppercase"
-              >Currently Building</span
-            >
-          </div>
+        <div class="flex flex-wrap gap-4">
+          <span class="flex items-center gap-1 text-sm text-gray-500">
+            <MapPin class="size-4 shrink-0" />
+            Tangerang, Indonesia
+          </span>
 
-          <h3 class="text-2xl font-bold text-white">🧠 MindNest</h3>
-
-          <p class="text-sm leading-relaxed text-purple-50 md:text-base">
-            A full-stack productivity tool for organizing thoughts and tasks. <br
-            />
-            Fast, lightweight, and beautiful.
-          </p>
-
-          <div class="flex flex-wrap gap-2">
-            <span class="rounded-full bg-white/20 px-3 py-1 text-sm text-white"
-              >React</span
-            >
-            <span class="rounded-full bg-white/20 px-3 py-1 text-sm text-white"
-              >TailwindCSS</span
-            >
-            <span class="rounded-full bg-white/20 px-3 py-1 text-sm text-white"
-              >Tauri</span
-            >
-            <span class="rounded-full bg-white/20 px-3 py-1 text-sm text-white"
-              >Rust</span
-            >
-          </div>
+          <span class="flex items-center gap-1 text-sm text-gray-500">
+            <GraduationCap class="size-4 shrink-0" />
+            BINUS University
+          </span>
         </div>
 
+        <p class="fade-in text-base leading-relaxed text-gray-800">
+          I love building full-stack apps that are clean, functional, and
+          actually enjoyable to use. Currently working with
+          <span class="font-medium text-purple-600">React</span>,
+          <span class="font-medium text-purple-600">TypeScript</span>,
+          <span class="font-medium text-purple-600">Tailwind CSS</span>, and
+          <span class="font-medium text-purple-600">Rust</span>.
+        </p>
+
+        <p class="fade-in text-base leading-relaxed text-gray-800">
+          Started coding because I wanted to build my own games, but now I'm
+          hooked on creating all kinds of apps and tools that solve the problems
+          I care about.
+        </p>
+
         <div
-          class="fade-in rounded-xl bg-linear-to-r from-purple-100 to-pink-100 p-5 text-sm shadow md:text-base"
+          class="fade-in flex items-center gap-2 rounded-lg border border-gray-100 bg-gray-50 px-4 py-2.5"
         >
-          <h4 class="mb-2 text-xl font-semibold text-gray-900">
-            A few things about me
-          </h4>
-          <ul class="flex flex-col gap-1.5 text-gray-800">
-            <li>🧩 I can solve a Rubik's cube in under 30 seconds</li>
-            <li>🗺️ I'm learning Chinese in my free time (你好!)</li>
-            <li>💪 I can do clean chin ups</li>
-          </ul>
+          <div class="size-2 rounded-full bg-green-400"></div>
+          <span class="text-sm text-gray-500">Currently building</span>
+          <span class="text-sm font-medium text-gray-900">MindNest</span>
+          <span class="text-sm text-gray-500"
+            >- a desktop app for my thoughts and tasks</span
+          >
+        </div>
+
+        <div class="fade-in flex flex-wrap gap-x-4 gap-y-2 pt-1">
+          <span class="text-sm text-gray-500">🧩 Rubik's cube under 30s</span>
+          <span class="text-sm text-gray-400">·</span>
+          <span class="text-sm text-gray-500">🗺️ Learning Chinese</span>
+          <span class="text-sm text-gray-400">·</span>
+          <span class="text-sm text-gray-500">💪 Clean chin ups</span>
         </div>
       </div>
+    </div>
+
+    <div class="fade-in mx-auto mt-8 max-w-4xl overflow-x-auto">
+      <img
+        src="https://ghchart.rshah.org/7c3aed/XilefEel"
+        alt="Felix Lee's GitHub contribution graph"
+        class="w-full min-w-[600px]"
+      />
     </div>
   </div>
 </section>
