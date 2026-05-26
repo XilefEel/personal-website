@@ -1,5 +1,5 @@
 ---
-import { ExternalLink, Github } from "@lucide/astro";
+import { Icon } from "astro-icon/components";
 import ProjectCard from "./ProjectCard.astro";
 
 const projects = [
@@ -68,9 +68,9 @@ const projects = [
           rel="noopener noreferrer"
           class="flex items-center gap-2 rounded-xl bg-white px-6 py-3 font-semibold text-purple-600 shadow-md transition-colors hover:bg-purple-50 hover:shadow-lg"
         >
-          <Github class="size-5" />
+          <Icon name="lucide:github" class="size-5" />
           <span>View All Projects on GitHub</span>
-          <ExternalLink class="h-4 w-4" />
+          <Icon name="lucide:external-link" class="h-4 w-4" />
         </a>
       </div>
     </div>

@@ -1,5 +1,5 @@
 ---
-import { Github } from "@lucide/astro";
+import { Icon } from "astro-icon/components";
 
 const { project } = Astro.props;
 ---
@@ -39,7 +39,7 @@ const { project } = Astro.props;
             aria-label={`View ${project.title} on GitHub`}
             class="flex items-center gap-2 text-sm font-medium text-purple-600 transition-colors hover:text-purple-800"
           >
-            <Github class="h-4 w-4" />
+            <Icon name="lucide:github" class="h-4 w-4" />
             <span>View GitHub</span>
           </a>
         </div>

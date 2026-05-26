@@ -1,7 +1,7 @@
 ---
-import { MapPin, GraduationCap } from "@lucide/astro";
 import aboutImage from "../assets/about_image.jpg";
 import { Image } from "astro:assets";
+import { Icon } from "astro-icon/components";
 ---
 
 <section id="about" class="bg-white px-8 pt-16 md:px-12 md:pt-20">
@@ -30,12 +30,12 @@ import { Image } from "astro:assets";
 
         <div class="flex flex-wrap gap-4">
           <span class="flex items-center gap-1 text-sm text-gray-500">
-            <MapPin class="size-4 shrink-0" />
+            <Icon name="lucide:map-pin" class="size-4 shrink-0" />
             Tangerang, Indonesia
           </span>
 
           <span class="flex items-center gap-1 text-sm text-gray-500">
-            <GraduationCap class="size-4 shrink-0" />
+            <Icon name="lucide:graduation-cap" class="size-4 shrink-0" />
             BINUS University
           </span>
         </div>
