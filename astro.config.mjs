@@ -1,5 +1,5 @@
 // @ts-check
-import { defineConfig } from "astro/config";
+import { defineConfig, fontProviders } from "astro/config";
 
 import tailwindcss from "@tailwindcss/vite";
 
@@ -9,5 +9,23 @@ export default defineConfig({
   base: "/personal-website",
   vite: {
     plugins: [tailwindcss()],
+  },
+  experimental: {
+    fonts: [
+      {
+        provider: fontProviders.local(),
+        name: "PlusJakartaSans",
+        cssVariable: "--font-plus-jakarta-sans",
+        options: {
+          variants: [
+            {
+              src: ["./src/assets/fonts/PlusJakartaSans.ttf"],
+              weight: "100 900",
+              style: "normal",
+            },
+          ],
+        },
+      },
+    ],
   },
 });

@@ -11,7 +11,10 @@ const links = [
 <nav class="fixed top-0 z-50 w-full bg-white/90 shadow-sm backdrop-blur-sm">
   <div class="mx-auto max-w-6xl px-6 py-4 md:px-8">
     <div class="flex items-center justify-center md:justify-between">
-      <a href="#home" class="hidden text-lg font-bold text-purple-600 md:block">
+      <a
+        href="#home"
+        class="hidden text-lg font-extrabold text-purple-600 md:block"
+      >
         Felix Lee
       </a>
 
@@ -20,7 +23,7 @@ const links = [
           links.map((link) => (
             <a
               href={link.href}
-              class="text-sm font-medium text-gray-700 transition-colors hover:text-purple-600 md:text-base"
+              class="text-sm font-medium text-gray-700 transition-colors hover:text-purple-600"
             >
               {link.name}
             </a>

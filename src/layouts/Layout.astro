@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import { Font } from "astro:assets";
 ---
 
 <!doctype html>
@@ -18,11 +19,11 @@ import "../styles/global.css";
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <Font cssVariable="--font-plus-jakarta-sans" />
   </head>
   <body>
     <slot />
-  </body>
-  <script>
+  </body><script>
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {

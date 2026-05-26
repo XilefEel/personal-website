@@ -5,7 +5,7 @@ html {
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-plus-jakarta-sans), sans-serif;
 }
 
 .fade-in {
