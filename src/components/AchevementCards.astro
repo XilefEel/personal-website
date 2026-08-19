@@ -5,9 +5,9 @@ const { achievement } = Astro.props;
 
 <div class="fade-in">
   <div
-    class="overflow-hidden rounded-xl border border-gray-200 bg-white shadow transition hover:scale-[1.01] hover:border-purple-500 hover:shadow-md"
+    class="overflow-hidden rounded-xl border border-zinc-200 bg-white shadow transition hover:scale-[1.01] hover:border-purple-500 hover:shadow-md"
   >
-    <div class="flex w-full items-center justify-center bg-gray-50 p-3">
+    <div class="flex w-full items-center justify-center bg-zinc-50 p-3">
       <Image
         src={achievement.src}
         alt={achievement.title}
@@ -20,7 +20,7 @@ const { achievement } = Astro.props;
       <h3 class="text-xl font-semibold text-purple-600">
         {achievement.title}
       </h3>
-      <p class="mt-2 text-sm text-gray-600">
+      <p class="mt-2 text-sm text-zinc-600">
         {achievement.description}
       </p>
     </div>
