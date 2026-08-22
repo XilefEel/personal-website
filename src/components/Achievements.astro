@@ -5,7 +5,8 @@ import icas2023 from "../assets/icas2023.webp";
 import icas2024 from "../assets/icas2024.webp";
 import pocc from "../assets/pocc.webp";
 
-import AchevementCards from "./AchevementCards.astro";
+import AchievementCard from "./AchievementCard.astro";
+
 const achievements = [
   {
     title: "AMO 2023",
@@ -39,20 +40,37 @@ const achievements = [
 ];
 ---
 
-<section id="achievements" class="bg-white px-8 py-16 md:px-12 md:py-20">
-  <div class="mx-auto max-w-6xl">
-    <h2
-      class="fade-in mb-12 text-center text-3xl font-extrabold text-purple-500 md:text-4xl"
+<section id="achievements">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 1440 320"
+    preserveAspectRatio="none"
+    class="block w-full"
+    style="margin-bottom: -1px;"
+  >
+    <path
+      fill="#ad46ff"
+      fill-opacity="1"
+      d="M0,32L40,37.3C80,43,160,53,240,85.3C320,117,400,171,480,176C560,181,640,139,720,117.3C800,96,880,96,960,106.7C1040,117,1120,139,1200,128C1280,117,1360,75,1400,53.3L1440,32L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"
     >
-      Achievements
-    </h2>
+    </path>
+  </svg>
 
-    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-      {
-        achievements.map((achievement) => (
-          <AchevementCards achievement={achievement} />
-        ))
-      }
+  <div class="bg-purple-500 px-8 pb-16 md:px-12 md:pb-20">
+    <div class="mx-auto max-w-5xl">
+      <h2
+        class="fade-in mb-12 text-center text-3xl font-extrabold text-white md:text-4xl"
+      >
+        Achievements
+      </h2>
+
+      <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        {
+          achievements.map((achievement) => (
+            <AchievementCard achievement={achievement} />
+          ))
+        }
+      </div>
     </div>
   </div>
 </section>

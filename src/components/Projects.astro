@@ -2,7 +2,14 @@
 import { Icon } from "astro-icon/components";
 import ProjectCard from "./ProjectCard.astro";
 
-const projects = [
+const projects: {
+  title: string;
+  description: string;
+  gradient: string;
+  link: string;
+  tech: string[];
+  status: string;
+}[] = [
   {
     title: "MindNest",
     description:
@@ -13,13 +20,13 @@ const projects = [
     status: "In Progress",
   },
   {
-    title: "Minecraft Clone",
+    title: "Cubit",
     description:
-      "A browser-based Minecraft clone built with Three.js and a Rust WebSocket server.",
+      "A browser-based voxel sandbox game built with Three.js and a Rust WebSocket server.",
     gradient: "from-green-500 to-teal-600",
-    link: "https://github.com/XilefEel/Minecraft-Clone",
+    link: "https://github.com/XilefEel/cubit",
     tech: ["Typescript", "Three.js", "Rust"],
-    status: "In Progress",
+    status: "Completed",
   },
   {
     title: "Moss.md",
@@ -33,46 +40,29 @@ const projects = [
 ];
 ---
 
-<section id="projects">
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 1440 320"
-    preserveAspectRatio="none"
-    class="block w-full"
-    style="margin-bottom: -1px;"
-  >
-    <path
-      fill="#ad46ff"
-      fill-opacity="1"
-      d="M0,32L40,37.3C80,43,160,53,240,85.3C320,117,400,171,480,176C560,181,640,139,720,117.3C800,96,880,96,960,106.7C1040,117,1120,139,1200,128C1280,117,1360,75,1400,53.3L1440,32L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"
+<section id="projects" class="bg-zinc-50 px-8 pb-16 md:px-12 md:pb-20">
+  <div class="mx-auto flex max-w-5xl flex-col gap-8">
+    <h3
+      class="fade-in text-center text-3xl font-extrabold text-purple-500 md:text-4xl"
     >
-    </path>
-  </svg>
+      Featured Projects
+    </h3>
 
-  <div class="bg-purple-500 px-8 pb-16 md:px-12 md:pb-20">
-    <div class="mx-auto max-w-6xl">
-      <h3
-        class="fade-in mb-12 text-center text-3xl font-extrabold text-white md:text-4xl"
+    <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+      {projects.map((project) => <ProjectCard project={project} />)}
+    </div>
+
+    <div class="fade-in flex justify-center text-center">
+      <a
+        href="https://github.com/XilefEel"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="flex items-center gap-2 rounded-xl bg-white px-6 py-3 text-sm font-semibold text-purple-600 shadow-sm transition-colors hover:bg-purple-50 hover:shadow-md"
       >
-        Featured Projects
-      </h3>
-
-      <div class="mb-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-        {projects.map((project) => <ProjectCard project={project} />)}
-      </div>
-
-      <div class="fade-in flex justify-center text-center">
-        <a
-          href="https://github.com/XilefEel"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="flex items-center gap-2 rounded-xl bg-white px-6 py-3 font-semibold text-purple-600 shadow-md transition-colors hover:bg-purple-50 hover:shadow-lg"
-        >
-          <Icon name="lucide:github" class="size-5" />
-          <span>View All Projects on GitHub</span>
-          <Icon name="lucide:external-link" class="h-4 w-4" />
-        </a>
-      </div>
+        <Icon name="lucide:github" class="size-5 shrink-0" />
+        <span>View All Projects on GitHub</span>
+        <Icon name="lucide:external-link" class="size-4 shrink-0" />
+      </a>
     </div>
   </div>
 </section>
