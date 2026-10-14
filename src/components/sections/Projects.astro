@@ -17,7 +17,7 @@ const projects: {
     gradient: "from-blue-500 to-purple-600",
     link: "https://github.com/XilefEel/MindNest",
     tech: ["React", "TypeScript", "Rust", "Tauri"],
-    status: "In Progress",
+    status: "Completed",
   },
   {
     title: "Cubit",
@@ -35,20 +35,28 @@ const projects: {
     gradient: "from-orange-500 to-red-600",
     link: "https://github.com/XilefEel/moss-md",
     tech: ["React", "TypeScript", "Rust", "Tauri"],
+    status: "Completed",
+  },
+  {
+    title: "Hubbub",
+    description: "A Discord-style chat app built around simplicity and privacy",
+    gradient: "from-sky-500 to-blue-600",
+    link: "https://github.com/XilefEel/hubbub",
+    tech: ["React", "Typescript", "Go", "Pocketbase"],
     status: "In Progress",
   },
 ];
 ---
 
 <section id="projects" class="bg-zinc-50 px-8 pb-16 md:px-12 md:pb-20">
-  <div class="mx-auto flex max-w-5xl flex-col gap-8">
+  <div class="mx-auto flex max-w-4xl flex-col gap-8">
     <h3
       class="fade-in text-center text-3xl font-extrabold text-purple-500 md:text-4xl"
     >
       Featured Projects
     </h3>
 
-    <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+    <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-2">
       {projects.map((project) => <ProjectCard project={project} />)}
     </div>
 
